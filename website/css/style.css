@@ -1,0 +1,61 @@
+.dollar-icon {
+	padding-bottom: .5em;
+	margin-top: -.5em;
+}
+.email-us-header {
+	margin-right: auto;
+	margin-left: auto;
+	width: 75%;
+	line-height: 1.3em;
+	margin-bottom: .5em;
+}
+.copy-past-email {
+	font-size: 24px;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.or-separator {
+	border: 2px solid #f05f40;
+	margin: 10px auto -300px auto;
+	padding-bottom: 300px;
+	height: 100%;
+	width: 0;
+	display: block;
+	position: relative;
+}
+.large-or {
+	position: absolute;
+	padding: .5em;
+	top: 50%;
+	margin-top: -10px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+	background-color: white;
+}
+@media screen and (max-width: 991px) {
+	.or-separator {
+		height: 0;
+		width: 100%;
+		margin: 5em 0;
+		padding: 0;
+	}
+	.large-or {
+		margin-top: 0;
+	}
+}
+
+
+.sign-up-input {
+	font-size: 16px;
+	padding: .3em;
+	width: 50%;
+	margin: .3em;
+}
+
+.copy-email {
+	display: block;
+	font-size: 20px;
+	line-height: 2;
+	color: #333;
+}
