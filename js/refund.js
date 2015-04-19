@@ -28,16 +28,16 @@ angular.module('refundApp', [])
     $scope.dollarFields = ['buying price','current price','change fee','forecast'];
     $scope.trips = [
         {
-            from: 'BOS',
-            to: 'PHX',
-            'date': '2015-04-30',
+            from: 'JFK',
+            to: 'LAX',
+            'date': '2015-05-10',
             'time': '9:05 AM',
             'return date': '2015-05-13',
             'return time': '10:05 AM',
             airline: 'Delta',
-            'buying price': 796,
-            'current price': 596,
-            'change fee': 0
+            'buying price': 468,
+            'current price': 359,
+            'change fee': 50
         },
         {
             from: 'JFK',
