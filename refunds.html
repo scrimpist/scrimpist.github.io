@@ -68,7 +68,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="refund-table-container">
-                            <h3>{{ description }}</h3>
+                            <h3>Your upcoming travels <span class="saved-money">You have saved <span class="money">${{savedMoney}}</span> to date!</span></h3>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
@@ -85,12 +85,12 @@
                                         <td ng-repeat="field in dollarFields">${{ trip[field] }}</td>
                                         <td>
                                             <span ng-show="trip.refunded">Refund requested</span>
-                                            <a ng-click="trip.refunded = true" class="btn btn-info btn-sm page-scroll wow bounceIn" ng-show="(trip['buying price'] - trip['change fee'] - trip['current price'])>0 && !trip.refunded">Get Refund</a>
+                                            <a ng-click="trip.refunded = true; refund(trip['buying price'] - trip['change fee'] - trip['current price')" class="btn btn-info btn-sm page-scroll wow bounceIn" ng-show="(trip['buying price'] - trip['change fee'] - trip['current price'])>0 && !trip.refunded">Get Refund</a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <a id="run-refunds" href="#" class="btn btn-primary wow bounceIn">Run automatic refunds</a>
+                            <a id="run-refunds" ng-click="getAllRefunds()" href="#" class="btn btn-primary wow bounceIn">Run automatic refunds</a>
                             <br><label>This will automatically run every hour. Next run in {{ minutes }} minute(s) and {{ counter }} second(s).</label>
                         </div>
                     </div>
@@ -102,7 +102,25 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <h2>Settings</h2>
-                        more text more text more text
+                        <label>Get alerts by email or phone when a price drops: </label><br>
+                        <input type="checkbox"> Email: <input type="email"class="form-control input"><br>
+                        <input type="checkbox" > Text: <input type="text"class="form-control input"><br>
+                        <br>
+                        <label><input type="checkbox" checked="yes" > Auto refund for price drops</label><br>
+                        <label class="loyalty-plan">Add a loyalty plan <br>
+                            <select>
+                                <option>Alaska</option>
+                                <option>Air France</option>
+                                <option>British</option>
+                                <option>Emirates</option>
+                                <option>Delta</option>
+                                <option>Jet Blue</option>
+                                <option>Singapore</option>
+                                <option>Southwest</option>
+                                <option>United</option>
+                            </select>
+                            #<input type="text" class="form-control input">
+                        </label><br>
                     </div>
                 </div>
             </div>
@@ -112,9 +130,31 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <h2>FAQ</h2>
-                        <p>
-                            more text more text more text
+                        <p class="q">Q: When do I get a refund?</p>
+                        <p class="a">
+                            A: You get a refund when a price changes more than a certain amount. This ammount varies by airline due to their change fees and rebooking fees. 
                         </p>
+                        <div class="change-fee-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Airlines</td><td>Price Needs to Drop Over $</td><td>Cost to change</td><td>Code</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Alaska</td><td>10</td><td>0</td><td>AS</td></tr>
+                                <tr><td>Air France</td><td>10</td><td>0</td><td>AF</td></tr>
+                                <tr><td>American</td><td>200</td><td>200</td><td>AA</td></tr>
+                                <tr><td>British</td><td>100GBP</td><td>0</td><td>BA</td></tr>
+                                <tr><td>Delta</td><td>200</td><td>200</td><td>DL</td></tr>
+                                <tr><td>Emirates</td><td>20</td><td>0</td><td>EK</td></tr>
+                                <tr><td>JetBlue</td><td>100</td><td>100</td><td>B6</td></tr>
+                                <tr><td>Singapore</td><td>100JPY</td><td>0 </td><td>SQ</td></tr>
+                                <tr><td>Southwest</td><td>0</td><td>0</td><td>WN</td></tr>
+                                <tr><td>United</td><td>200</td><td>200</td><td>UA</td></tr>
+                            </tbody>
+                        </table>
+                        </div>
                     </div>
                 </div>
             </div>

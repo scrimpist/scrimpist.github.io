@@ -80,6 +80,14 @@
 	background-color: #555;
 	color: white;
 }
+.saved-money {
+	float: right;
+	font-size: 18px;
+}
+.money {
+	color: rgb(0, 232, 0);;
+	font-size: 20px;
+}
 
 #refund-section {
 	background-color: #333;
@@ -99,4 +107,24 @@
 }
 #faq {
 	background-color: #B5E7F9;
+}
+.change-fee-table {
+	padding: 5px;
+}
+.change-fee-table td {
+	min-width: 200px;
+	border: 1px solid black;
+	padding: 2px;
+}
+.change-fee-table table{
+		background-color: white;
+}
+.input {
+	max-width: 200px;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.loyalty-plan {
+	background-color: white;
+	padding: 5px;
 }
