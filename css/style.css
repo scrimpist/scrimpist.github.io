@@ -80,3 +80,23 @@
 	background-color: #555;
 	color: white;
 }
+
+#refund-section {
+	background-color: #333;
+}
+#refund-section .container {
+	width: 100%;
+}
+.refund-table-container {
+	color: white;
+	padding: 5px;
+}
+#refund-section tbody>tr:hover {
+	background-color: #f05f40;
+}
+#settings {
+	background-color: #f05f40;
+}
+#faq {
+	background-color: #B5E7F9;
+}

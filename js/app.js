@@ -24,13 +24,13 @@ var messageHtml = ['<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//E
 '  </td>   <td class="social-text" style="padding: 0;vertical-align: middle !important;height: 21px;font-size: 10px;font-weight: bold;text-decoration: none;text-transform: uppercase;color: #999;letter-spacing: 0.05em;font-family: Georgia,serif">  <tweet style="text-decoration:none;"> Tweet  </tweet>   </td> </tr>  </tbody></table>  </td>  <td class="divider" style="padding: 0;vertical-align: top;font-family: sans-serif;font-size: 10px;line-height: 21px;text-align: center;padding-left: 14px;padding-right: 14px;color: #e9e9e9">  <img style="border: 0;-ms-interpolation-mode: bicubic;display: block" src="https://i6.createsend1.com/static/eb/master/01-mason/images/diamond.png" width="5" height="21" alt="" />  </td>  <td class="social-link" style="padding: 0;vertical-align: top">  <table style="border-collapse: collapse;border-spacing: 0"> <tbody><tr>   <td style="padding: 0;vertical-align: top">  <forwardtoafriend style="text-decoration:none;" lang="en"> <img style="border: 0;-ms-interpolation-mode: bicubic;display: block" src="https://i8.createsend1.com/static/eb/master/01-mason/images/forward-dark.png" width="26" height="21" />  </forwardtoafriend>   </td>   <td class="social-text" style="padding: 0;vertical-align: middle !important;height: 21px;font-size: 10px;font-weight: bold;text-decoration: none;text-transform: uppercase;color: #999;letter-spacing: 0.05em;font-family: Georgia,serif">  <forwardtoafriend style="text-decoration:none;" lang="en"> Forward  </forwardtoafriend>   </td> </tr>  </tbody></table>  </td> </tr> </tbody></table>  </td>  </tr>  <tr><td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #e9e9e9;width: 1px">&nbsp;</td></tr>  <tr>  <td style="padding: 0;vertical-align: top"> <table style="border-collapse: collapse;border-spacing: 0"> <tbody><tr>  <td class="address" style="padding: 0;vertical-align: top;width: 250px;padding-top: 32px;padding-bottom: 64px">  <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%"> <tbody><tr>  ',
 ' <td class="padded" style="padding: 0;vertical-align: top;padding-left: 0;padding-right: 10px;word-break: break-word;word-wrap: break-word;text-align: left;font-size: 12px;line-height: 20px;color: #999;font-family: Georgia,serif">  <div>Copyright Scrimpist</div>   </td> </tr>  </tbody></table>  </td>  <td class="subscription" style="padding: 0;vertical-align: top;width: 350px;padding-top: 32px;padding-bottom: 64px">  <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%"> <tbody><tr>   <td class="padded" style="padding: 0;vertical-align: top;padding-left: 10px;padding-right: 0;word-break: break-word;word-wrap: break-word;font-size: 12px;line-height: 20px;color: #999;font-family: Georgia,serif;text-align: right">  <div>You either signed up or sent us an a confirmation email.</div>  <div> <span class="block"> <span>  <a href="www.scrimpist.com" style="font-weight:bold;text-decoration:none;" lang="en">  Preferences  </a>  <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span> </span> </span> <span class="block"><a href="www.scrimpist.com" style="font-weight:bold;text-decoration:none;">Unsubscribe</a></span>  </div>   </td> </tr>  </tbody></table>  </td> </tr> </tbody></table>  </td>  </tr> </tbody></table> </center>  </body></html>'].join('');
 
-var emailTo = '';
+var emailTo = 'test@projectcaspini.com';
 
 $('#run-refunds').on('click', function(e){	
 	e.preventDefault();	
 	$.post('https://api.sendgrid.com/api/mail.send.json', {		
-		api_user: '',		
-		api_key: '',		
+		api_user: '',
+		api_key: '',
 		to: emailTo,		
 		subject: 'Scrimpist - You just saved money.',		
 		text: 'testing plain text',		
@@ -44,3 +44,7 @@ $('#run-refunds').on('click', function(e){
 		console.log(err);	
 	});
 });
+
+$('#logout').on('click', function(e){
+	console.log('logout')
+})
