@@ -44,5 +44,21 @@ $('#run-refunds').on('click', function(e){
 });
 
 $('#logout').on('click', function(e){
-	console.log('logout')
-})
+	console.log('cookie deleted, redirecting to main page');
+	$.removeCookie('scrimpist_code');
+	window.location.replace('http://www.scrimpist.com/');
+});
+
+var urlParts = window.location.href.split('code=');
+var refundPage = urlParts[0].indexOf('refunds') > -1;
+var code = urlParts[1];
+var cookie = $.cookie('scrimpist_code');
+if(code && !cookie && refundPage) {
+	console.log('cookie created');
+	$.cookie('scrimpist_code', code);
+}
+if((code || cookie) && !refundPage){
+	console.log('navigating to refund page');
+	window.location.replace('http://www.scrimpist.com/refunds.html');
+}
+
