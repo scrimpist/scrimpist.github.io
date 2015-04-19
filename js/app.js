@@ -1,18 +1,5 @@
 'use strict';
 
-
-// $('#google-login').on('click', function(e) {
-// 	e.preventDefault();
-// 	var scope = 'email%20profile';
-// 	var redirect = 'https%3A%2F%2Fwww.scrimpist.com';
-
-// 	var url = 'https://accounts.google.com/o/oauth2/auth?'+
-// 	'scope='+scope+'&'+
-// 	'redirect_uri='+redirect+'&'+
-// 	'response_type=token&'+
-// 	'client_id=276098467450-nd4dnmq8lbseb8iaggh5hdukb5f63i0k.apps.googleusercontent.com';
-// 	window.location.replace(url);
-// });
 var emailTo = '';
 $('#refund-finder-button').on('click', function(e){
 	$.post('https://api.sendgrid.com/api/mail.send.json', {
@@ -974,7 +961,7 @@ a:hover{color:#30495c !important}.wrapper .logo div{color:#41637e}.wrapper .logo
                         </tbody></table>
                       
               <div class="image" style="font-size: 12px;Margin-bottom: 24px;mso-line-height-rule: at-least;color: #565656;font-family: Georgia,serif" align="center">
-                <a style="text-decoration: underline;transition: all .2s;color: #41637e" href="http://scrimpist.com"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 640px" src="images/gc.png" alt="Fare Drop Alert" width="600" height="352" /></a>
+                <a style="text-decoration: underline;transition: all .2s;color: #41637e" href="http://scrimpist.com"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 640px" src="https://github.com/scrimpist/scrimpist.github.io/blob/master/CampaignMonitorEmail/images/gc.png?raw=true" alt="Fare Drop Alert" width="600" height="352" /></a>
               </div>
             
                         <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
@@ -998,11 +985,11 @@ a:hover{color:#30495c !important}.wrapper .logo div{color:#41637e}.wrapper .logo
                         </tbody></table>
                       
               <div class="image" style="font-size: 12px;Margin-bottom: 24px;mso-line-height-rule: at-least;color: #565656;font-family: Georgia,serif" align="center">
-                <img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 462px" src="images/chart.png" alt="" width="462" height="206" />
+                <img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 462px" src="https://github.com/scrimpist/scrimpist.github.io/blob/master/CampaignMonitorEmail/images/chart.png?raw=true" alt="" width="462" height="206" />
               </div>
             
               <div class="image" style="font-size: 12px;Margin-bottom: 24px;mso-line-height-rule: at-least;color: #565656;font-family: Georgia,serif" align="center">
-                <img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 462px" src="images/charges1.png" alt="" width="462" height="206" />
+                <img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 462px" src="https://raw.githubusercontent.com/scrimpist/scrimpist.github.io/master/CampaignMonitorEmail/images/charges1.png" alt="" width="462" height="206" />
               </div>
             
                         <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
