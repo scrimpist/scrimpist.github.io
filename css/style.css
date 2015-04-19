@@ -1,3 +1,4 @@
+
 .graph-icon {
 	fill: white;
 }
@@ -42,8 +43,8 @@
 	position: absolute;
 	padding: .5em;
 	top: 50%;
-	margin-top: -10px;
-	transform: translate(-50%,-50%);
+	/*margin-top: -20px;*/
+	transform: translate(-50%,-75%);
 	font-size: 40px;
 	background-color: white;
 }
@@ -56,6 +57,7 @@
 	}
 	.large-or {
 		margin-top: 0;
+		transform: translate(-50%, -50%);
 	}
 }
 .sign-up-button {
