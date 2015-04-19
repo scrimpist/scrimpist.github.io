@@ -53,12 +53,18 @@ var urlParts = window.location.href.split('code=');
 var refundPage = urlParts[0].indexOf('refunds') > -1;
 var code = urlParts[1];
 var cookie = $.cookie('scrimpist_code');
-if(code && !cookie && refundPage) {
-	console.log('cookie created');
-	$.cookie('scrimpist_code', code);
-}
-if((code || cookie) && !refundPage){
+if(refundPage) {
+	if(!code && !cookie) {
+		console.log('not authorized, redirecting');
+		window.location.replace('http://www.scrimpist.com');
+	}
+	if(code && !cookie ) {
+		console.log('cookie created');
+		$.cookie('scrimpist_code', code);
+	}
+} else if (code || cookie) {
 	console.log('navigating to refund page');
 	window.location.replace('http://www.scrimpist.com/refunds.html');
-}
+} 
+
 
