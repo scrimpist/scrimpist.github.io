@@ -1,3 +1,14 @@
+.graph-icon {
+	fill: white;
+}
+
+#services {
+	background-color: #B5E7F9;
+}
+#services .text-muted {
+	color: #666;
+}
+
 .dollar-icon {
 	padding-bottom: .5em;
 	margin-top: -.5em;
