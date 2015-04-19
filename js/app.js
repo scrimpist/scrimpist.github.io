@@ -53,8 +53,9 @@ var urlParts = window.location.href.split('code=');
 var refundPage = urlParts[0].indexOf('refunds') > -1;
 var code = urlParts[1];
 var cookie = $.cookie('scrimpist_code');
+var test = false;
 if(refundPage) {
-	if(!code && !cookie) {
+	if(!code && !cookie && !test) {
 		console.log('not authorized, redirecting');
 		window.location.replace('http://www.scrimpist.com');
 	}

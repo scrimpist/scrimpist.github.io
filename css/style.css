@@ -89,6 +89,12 @@
 	font-size: 20px;
 }
 
+.loading-icon{
+  width: 20%;
+  display: block;
+  margin: auto;
+}
+
 #refund-section {
 	background-color: #333;
 }

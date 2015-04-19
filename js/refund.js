@@ -23,6 +23,10 @@ angular.module('refundApp', [])
             // err.status will contain the status code
         });   
     };
+    $scope.loading = true;
+    setTimeout(function(){
+        $scope.loading = false;
+    }, 1000);
     $scope.savedMoney = 432;
     $scope.tableFields = ['from','to','date','time','return date','return time','airline'];
     $scope.dollarFields = ['buying price','current price','change fee','forecast'];

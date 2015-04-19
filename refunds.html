@@ -69,7 +69,8 @@
                     <div class="col-xs-12">
                         <div class="refund-table-container">
                             <h3>Your upcoming travels <span class="saved-money">You have saved <span class="money">${{savedMoney}}</span> to date!</span></h3>
-                            <table class="table table-hover">
+                            <img class="loading-icon" ng-show="loading" src="img/loading.gif">
+                            <table ng-show="!loading" class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
