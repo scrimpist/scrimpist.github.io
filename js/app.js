@@ -1,7 +1,7 @@
 'use strict';
 var lock = null;
 $(document).ready(function() {
-   lock = new Auth0Lock('YOUR_CLIENT_ID', 'YOUR_NAMESPACE');
+   lock = new Auth0Lock('HSarQ6RPNNok3mEJbyFPMKFW6vyADXDV', 'scrimpist.auth0.com');
 });
 var userProfile;
 
