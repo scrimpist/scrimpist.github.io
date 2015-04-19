@@ -62,7 +62,8 @@
                       <td ng-repeat="field in tableFields">{{ trip[field] }}</td>
                       <td ng-repeat="field in dollarFields">${{ trip[field] }}</td>
                       <td>
-                          <a href="#get-started" class="btn btn-info btn-sm page-scroll wow bounceIn" ng-show="(trip['buying price'] - trip['change fee'] - trip['current price'])>0">Get Refund</a>
+                          <span ng-show="trip.refunded">Refund requested</span>
+                          <a ng-click="trip.refunded = true" class="btn btn-info btn-sm page-scroll wow bounceIn" ng-show="(trip['buying price'] - trip['change fee'] - trip['current price'])>0 && !trip.refunded">Get Refund</a>
                       </td>
                     </tr>
                   </tbody>
